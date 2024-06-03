@@ -32,9 +32,15 @@ const collectEmployees = function () {
     function salaryNumber(x) {
       if (isNaN(x)) {
         return 0;
+      } else {
+        return x;
       }
     }
-    employee.salary = parseInt(window.prompt(`Salary: `, `Amount...`));
+    const salaryNaN = salaryNumber(window.prompt(`Salary: `, `Amount...`));
+
+    employee.salary = parseInt(salaryNaN);
+
+    //salaryNumber(employee.salary);
 
     employeesArray.push(employee);
   }
